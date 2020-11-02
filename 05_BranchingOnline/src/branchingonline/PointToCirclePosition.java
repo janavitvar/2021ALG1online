@@ -32,22 +32,23 @@ public class PointToCirclePosition {
         float distance = (float)Math.sqrt(Math.pow(sX - pX, 2) + Math.pow(sY - pY, 2));
         //System.out.println(distance); //kontrolni vypis pri testovani
         
-        if(Math.abs(distance - r) < PRECISION){ //distance == r
-            position = ON;
-        }else{
-            if(distance > r){
-                position = OUTSIDE;
-            } else {
+        if (Math.abs(distance - r) < PRECISION) { //zacatek d == r  //d jako distance
+            position = ON; 
+        } else { //konec d == r , //zacatek d != r
+            if (distance > r) { // zacatek d != r a zaroven d > r
+                position = OUTSIDE; 
+            } else { // konec d != r a zaroven d > r // zacatek d != r a zaroven d < r
                 position = INSIDE;
-            }
-        }
+            } // konec d != r a zaroven d < r
+        }//konec d != r
+        
         //System.out.println(position); //kontrolni vypis pri testovani
         
         /*
-        //skraceny zapis
+        //skraceny zapis else if
         if (Math.abs(distance - r) < PRECISION) { 
             position = ON;
-        } else if (distance > r) {
+        } else if (distance > r) { //v else krome vnoreneho if-else zadny jiny kod neni
                 position = OUTSIDE;
         } else {
                 position = INSIDE;
