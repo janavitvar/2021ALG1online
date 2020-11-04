@@ -11,11 +11,11 @@ public class PerfectNumber {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Zadej cislo:");
-        int number = sc.nextInt();
+        long number = sc.nextLong();
         boolean perfect;
        
-        int possibleDivisor = 2;
-        int sum = 1;
+        long possibleDivisor = 2;
+        long sum = 1;
         while(possibleDivisor <= number/2){
             if(number % possibleDivisor == 0){
                 sum = sum + possibleDivisor;
