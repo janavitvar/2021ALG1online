@@ -9,10 +9,25 @@ import java.util.Scanner;
 public class RepeatingApp {
 
     public static void main(String[] args) {
-        //outsite the loop, should be done only once
+        //deklarace promennych mimo cyklus
         Scanner sc = new Scanner(System.in);
         int number;
         boolean isEven;
+        
+        /*
+        //Opakovani aplikace na zaklade cisla 1
+        int choice = 1;
+        while(choice == 1){
+            System.out.println("Zadej cislo");
+            number = sc.nextInt();
+
+            even = number % 2 == 0;
+
+            System.out.println("Cislo " +  number + ((even)? " je ": " neni ") + "sude.");
+            System.out.println("Kdyz chce pokracovat, stiskni 1");
+            choice = sc.nextInt();
+        }
+        */
         
         /*
         //Opakovani aplikace na zaklade znaku 'a' nebo 'A'
@@ -32,7 +47,6 @@ public class RepeatingApp {
         
         ///*
         //Opakovani aplikace na zaklade znaku 'a' nebo 'A', program se provede alespon jednou 
-        char choice;
         do {
             System.out.println("Zadej cislo:");
             number = sc.nextInt();
@@ -41,8 +55,7 @@ public class RepeatingApp {
         
             System.out.println("Cislo " + number + " je " + ((isEven)?"sude":"liche") + ".");
             System.out.println("Pokud chces pokracovat, stlac a nebo A");
-            choice = sc.next().toLowerCase().charAt(0);
-        }while (choice == 'a'); //while(sc.next().charAt(0) == 'a')
+        } while ((sc.next().toLowerCase().charAt(0)) == 'a'); //nacteni a zaroven porovnani
         //*/
         
         /*

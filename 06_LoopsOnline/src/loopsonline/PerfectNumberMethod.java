@@ -20,6 +20,28 @@ public class PerfectNumberMethod {
     }
     
     public static boolean isPerfect(long number){
+        boolean perfect;
+        if(number == 0 || number == 1){
+            perfect = false;
+        } else {
+            long possibleDivisor = 2;
+            long sum = 1;
+            while(possibleDivisor <= number/2){
+                if(number % possibleDivisor == 0){
+                    sum = sum + possibleDivisor;
+                }
+                possibleDivisor++;
+            }
+            perfect = number == sum;
+        }
+        return perfect;
+    }
+    
+    /* short form
+    public static boolean isPerfect(long number){
+        if(number == 0 || number == 1){
+            return false;
+        }
         long possibleDivisor = 2;
         long sum = 1;
         while(possibleDivisor <= number/2){
@@ -28,8 +50,7 @@ public class PerfectNumberMethod {
             }
             possibleDivisor++;
         }
-        //boolean perfect = number == sum;
-        //return perfect;
         return number == sum;
     }
+    */
 }

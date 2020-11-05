@@ -14,15 +14,19 @@ public class PerfectNumber {
         long number = sc.nextLong();
         boolean perfect;
        
-        long possibleDivisor = 2;
-        long sum = 1;
-        while(possibleDivisor <= number/2){
-            if(number % possibleDivisor == 0){
-                sum = sum + possibleDivisor;
+        if(number == 0 || number == 1){
+            perfect = false;
+        } else {
+            long possibleDivisor = 2;
+            long sum = 1;
+            while(possibleDivisor <= number/2){
+                if(number % possibleDivisor == 0){
+                    sum = sum + possibleDivisor;
+                }
+                possibleDivisor++;
             }
-            possibleDivisor++;
+            perfect = number == sum;
         }
-        perfect = number == sum;
         
         System.out.println("Cislo " + ((perfect)?"je":"neni") + " dokonaly.");
     }
