@@ -1,4 +1,4 @@
-package loopsonline;
+package loopswhileonline;
 
 import java.util.Scanner;
 
