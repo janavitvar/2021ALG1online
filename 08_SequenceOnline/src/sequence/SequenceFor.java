@@ -8,6 +8,9 @@ import tools.NumberTools; //lepsi, v kodu je videt, ze ktere tridy je dana metod
 /**
  * Spracovava sekvencne zadany pocet cisel
  * zadani sekvence - zadany pocet, pak zadany dany pocet cisel
+ * 
+ * Vyuziva projekt 09_MyLibraryOnline (je ho potreba pridat do Libraries)
+ * 
  * @author JV
  */
 public class SequenceFor {
