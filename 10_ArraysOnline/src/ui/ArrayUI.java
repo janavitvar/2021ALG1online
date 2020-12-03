@@ -31,6 +31,7 @@ public class ArrayUI {
         return numbers;
     }
     
+    //pretizena (overloaded) metoda load - stejny nazev jiny pocet nebo typ vstupnich parametru 
     public static int[] load(int n){
         int[] a = new int[n];
         for (int i = 0; i < a.length; i++) {
@@ -39,7 +40,7 @@ public class ArrayUI {
         return a;
     }
     
-    //alternativni metoda
+    //pretizena (overloaded) metoda load - stejny nazev jiny pocet nebo typ vstupnich parametru
     public static void load(int[] a){
         for (int i = 0; i < a.length; i++) {
             a[i] = sc.nextInt();

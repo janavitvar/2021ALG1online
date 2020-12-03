@@ -9,11 +9,21 @@ import ui.ArrayUI;
 public class ArrayTools {
 
     public static void main(String[] args) {
+        /*
+        int[] numbers = new int[3];
+        numbers[0] = 1;
+        numbers[1] = 3;
+        numbers[2] = 7;
+        //System.out.println(numbers); //nema smysl
+        System.out.println("Hodnota na indexe 1: " + numbers[1]);
+        System.out.println("Delka pole: " + numbers.length);
+        System.out.println("Posledni index: " + (numbers.length - 1));
+        System.out.println("Hodnota na poslednim indexe: " + numbers[numbers.length - 1]);
+        */
         int[] testingArray = {1, 2, 5, 3}; //staticky inicializator
-        ArrayUI.print(testingArray);
-        System.out.println("");
         System.out.println(sum(testingArray));
         System.out.println(isSortedAsc(testingArray));
+        System.out.println(toString(testingArray));
     }
     
     public static int sum(int[] a){
@@ -31,5 +41,18 @@ public class ArrayTools {
             }
         }
         return true;
+    }
+    /**
+     * Returns array as a String
+     * @param a
+     * @return 
+     */
+    public static String toString(int[] a) {
+        String s = "[";
+        for (int i = 0; i < a.length-1; i++) {
+            s = s + a[i] + ", ";
+        }
+        s = s + a[a.length - 1]+ "]";
+        return s;
     }
 }
