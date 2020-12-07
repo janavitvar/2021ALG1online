@@ -67,6 +67,18 @@ public class ArrayTools {
         }
         return true;
     }
+    
+    //alternativa pomocí boolean proměnné (nepouzivejte break)
+    public static boolean isSortedAsc1(int[] a){
+        boolean asc = true;
+        for (int i = 1; asc && i < a.length; i++) { //ma smysl pokracovat ve for, jenom kdyz asc je true
+            if(a[i] < a[i-1]){
+                asc = false;
+            }
+        }
+        return asc;
+    }
+    
     /**
      * Returns array as a String
      * @param a
